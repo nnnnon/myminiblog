@@ -1,0 +1,36 @@
+<p>
+<%flash[:notice]%>
+</p>
+<p>
+  <b>Text:</b>
+  <%=textilize(@message.body) %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @message.name %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%=h @message.when %>
+</p>
+
+<!-- #1 -->
+<% unless @message.comments.empty? %>
+  <h3>Comments</h3>
+  <% @message.comments.each do |comment| %>
+  <p><%= h comment.content %></p>
+  <% end %>
+<% end %>
+
+<!-- #2 -->
+<h3>New Comment</h3>
+<%= render :partial => @comment = Comment.new, 
+   :locals => { :button_name => 'Create'}%>
+
+<%= link_to 'Comments', message_comments_path(@message) %>
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>
+
+

@@ -1,0 +1,5 @@
+page.insert_html :top, 'message_list' ,"<div id='textbox'>#{textilize(@message.body)}  posted by #{ h @message.name} at #{ h formattime(@message.created_at+28800) }
+#{ link_to 'Show', @message } #{ link_to 'Edit', edit_message_path(@message) }
+#{ link_to 'Destroy', @message, :confirm => 'Are you sure?', :method => :delete }</div>"
+page.visual_effect :highlight, 'textbox', :duration => 4 
+

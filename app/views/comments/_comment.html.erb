@@ -1,0 +1,10 @@
+<% form_for([@message, @comment]) do |f| %>
+  <p>
+    <b>Body</b><br />
+    <%= f.text_area :content,:size=>"70X10" %>
+  </p>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>

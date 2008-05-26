@@ -1,0 +1,27 @@
+<h1>Editing message</h1>
+
+<%= error_messages_for :message %>
+
+<% form_for(@message) do |f| %>
+  <p>
+    <b>Text</b><br />
+    <%= f.text_area :body,:size=>"50X10" %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>When</b><br />
+    <%= f.datetime_select :when %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @message %> |
+<%= link_to 'Back', messages_path %>

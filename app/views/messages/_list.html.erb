@@ -1,0 +1,16 @@
+<% @page.each do |message|%>
+<div id='textbox'>
+<p><%=textilize(message.body) %> <p>
+<!-- #1 -->
+<% unless message.comments.empty? %>
+<ul>
+  <% message.comments.each do |comment| %>
+  <li><%= h comment.content %></li>
+  <% end %>
+ </ul>
+<% end %>
+posted by <%=h message.name %> at <%=h formattime(message.created_at+28800) %>
+<%= link_to 'Show', message %> <%= link_to 'Edit', edit_message_path(message) %>
+<%= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete %>
+</div>
+<% end %>

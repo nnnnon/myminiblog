@@ -1,0 +1,29 @@
+<script language="javascript" type="text/javascript">
+function set_mcontent(){
+    document.getElementById('mcontent').value=''
+  }
+  function init(){
+  var ctrl=document.getElementById("mcontent");
+  ctrl.focus();
+} 
+  </script>
+  <body onload="init()", align="center"> 
+
+<div id="update_form">
+<% form_remote_tag :url => {:action => 'add_message'},:after => "set_mcontent();",:id=>"form1"  do %>
+  <%= text_area 'message', 'body',:id=>"mcontent",:cols => "50", :rows => '4',:class=>'green_rounded',:onkeydown=>"javascript:if(this.value.length>0 && ((event.ctrlKey && event.keyCode == 13) || (event.altKey && event.keyCode == 83))){ document.getElementById('post_message').click(); }"    %></p>  
+  <br>
+  <%= submit_tag "发布" ,:id=>"post_message"%>
+<% end %>
+</div>
+<br />
+<div id='message_list'>
+  <%= render :partial=>"list"%> 
+ </div>
+
+<div id=page_control>
+  <%= @page.number %>
+  <%= link_to("Prev", messages_url(:page => @page.prev.number)) if @page.prev? %>
+  <%= link_to("Next", messages_url(:page => @page.next.number)) if @page.next? %>
+    </div>
+</body>

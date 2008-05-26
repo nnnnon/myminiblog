@@ -1,0 +1,13 @@
+<p>
+  <b>Message:</b>
+  <%=h @comment.message %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @comment.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
