@@ -12,6 +12,7 @@ RAILS_GEM_VERSION = '2.0.2'
 
 # # # # # # RAILS_GEM_VERSION = '2.0.2'
 require 'redcloth'
+require 'paginator'
 # # # # # # # RAILS_GEM_VERSION = '2.0.2'
 
 # # # # # # # # RAILS_GEM_VERSION = '2.0.2'
