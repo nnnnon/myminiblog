@@ -21,6 +21,8 @@ class MessagesController < ApplicationController
           end
         @page = @pager.page(params[:page])
     # respond_to here if you want it                     
+     MyMailer.create_send #建一个email对象
+     MyMailer.deliver_send #发送email  
 
     respond_to do |format|
       format.html # index.html.erb

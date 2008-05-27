@@ -13,6 +13,7 @@ RAILS_GEM_VERSION = '2.0.2'
 # # # # # # RAILS_GEM_VERSION = '2.0.2'
 require 'redcloth'
 require 'paginator'
+require 'smtp_tls' 
 # # # # # # # RAILS_GEM_VERSION = '2.0.2'
 
 # # # # # # # # RAILS_GEM_VERSION = '2.0.2'
@@ -32,6 +33,21 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.active_record.observers = :user_observer
 
+
+  # config/environments/development.rb
+config.action_mailer.raise_delivery_errors = true #错误异常是事抛给应用程序
+
+# set delivery method to :smtp, :sendmail or :test
+config.action_mailer.delivery_method = :smtp # 发送邮件方式
+
+# these options are only needed if you choose smtp delivery
+config.action_mailer.smtp_settings = {
+:address        => 'smtp.gmail.com',
+:port           => 587,
+:authentication => :plain,
+:user_name      => 'nnnnon@gmail.com', #你的gmail帐号
+:password       => '2Akgyv2a' #你的gmail密码
+}
 
   #require "will_paginate" 
   # Settings in config/environments/* take precedence over those specified here.
