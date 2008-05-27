@@ -1,0 +1,1631 @@
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:55:03) [GET]
+  Session ID: 46358e977aa97ff1b7d4f51e30ba3bbc
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://127.0.0.1:3001/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x3855c0c @filter=:login_required>] rendered_or_redirected.
+Completed in 0.00010 (10000 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://127.0.0.1/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-05-27 14:55:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvIgYv--ba544688a017fcaf41c6e227e2e1c7c272c2f6b9
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.01500 (66 reqs/sec) | Rendering: 0.01500 (100%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-05-27 14:55:13) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5MGI4ZWIzYTFmY2U5%0AMjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--912d6da6a303543e32ea68bfc22f71e54d06056d
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-05-27 14:55:30) [POST]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5MGI4ZWIzYTFmY2U5%0AMjIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--912d6da6a303543e32ea68bfc22f71e54d06056d
+  Parameters: {"user"=>{"password_confirmation"=>"2akgyv2a", "login"=>"nnnnon", "password"=>"2akgyv2a", "email"=>"nnnnon@gmail.com"}, "commit"=>"Sign up", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.031000)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(users.login) = 'nnnnon') LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (LOWER(users.email) = 'nnnnon@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`salt`, `activated_at`, `updated_at`, `crypted_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `login`, `created_at`, `email`) VALUES('c84135ecd5548b8561db88ce44ecc1a16d755850', NULL, '2008-05-27 06:55:30', '8ec2cc628cb54bf3bf29fd51113b3430b3d3d218', 'ec70332194a8a06a077db6184b483d16eb21ba41', NULL, NULL, 'nnnnon', '2008-05-27 06:55:30', 'nnnnon@gmail.com')[0m
+Sent mail:
+ Date: Tue, 27 May 2008 14:55:30 +0800
+From: ADMINEMAIL
+To: nnnnon@gmail.com
+Subject: [YOURSITE] Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: nnnnon
+  Password: 2akgyv2a
+
+Visit this url to activate your account:
+
+  http://nnnnon.heroku.com/activate/ec70332194a8a06a077db6184b483d16eb21ba41
+  [4;35;1mSQL (0.016000)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 1.36000 (0 reqs/sec) | DB: 0.06300 (4%) | 302 Found [http://127.0.0.1/users]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:55:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG1RoYW5rcyBmb3Igc2lnbmluZyB1%0AcCEGOgpAdXNlZHsGOwhUOg5yZXR1cm5fdG8w--94063703ac64694decb0c87177e30cf1ea898abe
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.016000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.01600)
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.04600 (42%) | DB: 0.04800 (44%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 14:55:41) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"这样就可以了吗？"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.000000)[0m   [0mMysql::Error: #HY000Incorrect string value: '\xE8\xBF\x99\xE6\xA0\xB7...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:55:41', '这样就可以了吗？', NULL, '2008-05-27 06:55:41')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE8\xBF\x99\xE6\xA0\xB7...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:55:41', '这样就可以了吗？', NULL, '2008-05-27 06:55:41')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:55:56) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.01500 (24%) | DB: 0.03200 (51%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:55:58) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.01600)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.03100 (39%) | DB: 0.03200 (41%) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#activate (for 127.0.0.1 at 2008-05-27 14:57:13) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"activate", "activation_code"=>"ec70332194a8a06a077db6184b483d16eb21ba41", "controller"=>"users"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`activation_code` = 'ec70332194a8a06a077db6184b483d16eb21ba41') LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.016000)[0m   [0;1mUPDATE `users` SET `created_at` = '2008-05-27 06:55:30', `login` = 'nnnnon', `crypted_password` = '8ec2cc628cb54bf3bf29fd51113b3430b3d3d218', `activated_at` = '2008-05-27 06:57:13', `remember_token_expires_at` = NULL, `activation_code` = NULL, `salt` = 'c84135ecd5548b8561db88ce44ecc1a16d755850', `remember_token` = NULL, `email` = 'nnnnon@gmail.com', `updated_at` = '2008-05-27 06:57:13' WHERE `id` = 1[0m
+Sent mail:
+ Date: Tue, 27 May 2008 14:57:13 +0800
+From: ADMINEMAIL
+To: nnnnon@gmail.com
+Subject: [YOURSITE] Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+nnnnon, your account has been activated.  You may now start adding your plugins:
+
+  http://nnnnon.heroku.com/
+  [4;35;1mSQL (0.015000)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 0.87500 (1 reqs/sec) | DB: 0.03100 (3%) | 302 Found [http://127.0.0.1/activate/ec70332194a8a06a077db6184b483d16eb21ba41]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:57:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiFVNpZ251cCBjb21wbGV0ZSEGOgpA%0AdXNlZHsGOwhUOg5yZXR1cm5fdG8w--edfb2c16cc5d54fcb8b78ad51ee024287911e29b
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.015000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.01500 (24%) | DB: 0.01500 (24%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:57:19) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.03100 (39%) | DB: 0.03100 (39%) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-05-27 14:57:27) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-05-27 14:57:29) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"create", "controller"=>"sessions", "password"=>"2akgyv2a", "login"=>"nnnnon@gmail.com"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'nnnnon@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+Rendering sessions/new
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-05-27 14:57:33) [POST]
+  Session ID: BAh7CToMdXNlcl9pZDA6DGNzcmZfaWQiJWIzNzIxYzIwY2U1NWNiN2RjOTBi%0AOGViM2ExZmNlOTIyIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz%0AaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--f9dfed48ce86c16e684d8bce5447e10de9718e0d
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"create", "controller"=>"sessions", "password"=>"2akgyv2a", "login"=>"nnnnon"}
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (login = 'nnnnon' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://127.0.0.1:3001/
+Completed in 0.04700 (21 reqs/sec) | DB: 0.01600 (34%) | 302 Found [http://127.0.0.1/session]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:57:33) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVs%0AbHkGOgpAdXNlZHsGOwhUOg5yZXR1cm5fdG8w--e4830489e785c5a0ff6185fed280fc1705038341
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.01600 (25%) | DB: 0.01600 (25%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 14:57:47) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"不知道现在是不是可以了呢？\n"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mMysql::Error: #HY000Incorrect string value: '\xE4\xB8\x8D\xE7\x9F\xA5...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:57:47', '不知道现在是不是可以了呢？\n', NULL, '2008-05-27 06:57:47')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE4\xB8\x8D\xE7\x9F\xA5...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:57:47', '不知道现在是不是可以了呢？\n', NULL, '2008-05-27 06:57:47')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:58:18) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.01500)
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.07800 (38%) | DB: 0.04600 (22%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:58:24) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.01600 (25%) | DB: 0.01600 (25%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 14:58:39) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"好像不可以更新，怎么回事呢？"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mMysql::Error: #HY000Incorrect string value: '\xE5\xA5\xBD\xE5\x83\x8F...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:58:39', '好像不可以更新，怎么回事呢？', NULL, '2008-05-27 06:58:39')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE5\xA5\xBD\xE5\x83\x8F...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:58:39', '好像不可以更新，怎么回事呢？', NULL, '2008-05-27 06:58:39')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 14:58:50) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"为什么呢？"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mMysql::Error: #HY000Incorrect string value: '\xE4\xB8\xBA\xE4\xBB\x80...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:58:50', '为什么呢？', NULL, '2008-05-27 06:58:50')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE4\xB8\xBA\xE4\xBB\x80...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 06:58:50', '为什么呢？', NULL, '2008-05-27 06:58:50')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:59:12) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.01600 (25%) | DB: 0.06200 (98%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:59:42) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.015000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.01500)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (50%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 14:59:44) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01500 (19%) | DB: 0.01600 (20%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:09:50) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.032000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.06300 (57%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:10:21) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03200 (34%) | DB: 0.04600 (48%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:10:27) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"这样呢，行了吗？"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.000000)[0m   [0mMysql::Error: #HY000Incorrect string value: '\xE8\xBF\x99\xE6\xA0\xB7...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:10:27', '这样呢，行了吗？', NULL, '2008-05-27 07:10:27')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE8\xBF\x99\xE6\xA0\xB7...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:10:27', '这样呢，行了吗？', NULL, '2008-05-27 07:10:27')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:12:59) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.headers):
+    /app/controllers/application.rb:14:in `configure_charsets'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `send!'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `call'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:441:in `run'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:716:in `run_before_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:695:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:13:13) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.headers):
+    /app/controllers/application.rb:14:in `configure_charsets'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `send!'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `call'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:441:in `run'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:716:in `run_before_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:695:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:14:39) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.headers):
+    /app/controllers/application.rb:14:in `configure_charsets'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `send!'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `call'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:441:in `run'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:716:in `run_before_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:695:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:15:21) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.047000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.09400 (46%) | DB: 0.09400 (46%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:15:34) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"不可以，晕了！"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mMysql::Error: #HY000Incorrect string value: '\xE4\xB8\x8D\xE5\x8F\xAF...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:15:34', '不可以，晕了！', NULL, '2008-05-27 07:15:34')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE4\xB8\x8D\xE5\x8F\xAF...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:15:34', '不可以，晕了！', NULL, '2008-05-27 07:15:34')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:17:13) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.03100 (39%) | DB: 0.04600 (58%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:17:21) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"不知道可不可以了呢？"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.000000)[0m   [0mMysql::Error: #HY000Incorrect string value: '\xE4\xB8\x8D\xE7\x9F\xA5...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:17:21', '不知道可不可以了呢？', NULL, '2008-05-27 07:17:21')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE4\xB8\x8D\xE7\x9F\xA5...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:17:21', '不知道可不可以了呢？', NULL, '2008-05-27 07:17:21')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:17:29) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.015000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01600 (20%) | DB: 0.07800 (100%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:19:43) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.01600 (17%) | DB: 0.04600 (48%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:19:48) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"message"=>{"body"=>"可以了吗？\n"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.000000)[0m   [0mMysql::Error: #HY000Incorrect string value: '\xE5\x8F\xAF\xE4\xBB\xA5...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:19:48', '可以了吗？\n', NULL, '2008-05-27 07:19:48')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE5\x8F\xAF\xE4\xBB\xA5...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:19:48', '可以了吗？\n', NULL, '2008-05-27 07:19:48')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:22:09) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMyMGNlNTVjYjdkYzkw%0AYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--4b09b7af9aae2dfb401e39030bbc4fbf37a4f3da
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.04700 (50%) | DB: 0.01600 (17%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:22:20) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--f22c899723c24e6d25208e246c23531191d8ab7d
+  Parameters: {"message"=>{"body"=>"乱码问题，真是烦死了！"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.000000)[0m   [0mMysql::Error: #HY000Incorrect string value: '\xE4\xB9\xB1\xE7\xA0\x81...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:22:20', '乱码问题，真是烦死了！', NULL, '2008-05-27 07:22:20')[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE4\xB9\xB1\xE7\xA0\x81...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:22:20', '乱码问题，真是烦死了！', NULL, '2008-05-27 07:22:20')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:22:28) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--30a9621ce38e23d8e56b728813c56d2f7579ea2d
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+Rendered messages/_list (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01500 (19%) | DB: 0.04800 (61%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:36:44) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--f22c899723c24e6d25208e246c23531191d8ab7d
+  Parameters: {"message"=>{"body"=>"测试壹"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mMysql::Error: #HY000Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:36:44', '测试壹', NULL, '2008-05-27 07:36:44')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'body' at row 1: INSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:36:44', '测试壹', NULL, '2008-05-27 07:36:44')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/messages_controller.rb:54:in `add_message'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:37:57) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--30a9621ce38e23d8e56b728813c56d2f7579ea2d
+  Parameters: {"message"=>{"body"=>"test"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mINSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:37:57', 'test', NULL, '2008-05-27 07:37:57')[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering messages/add_message
+Completed in 1.28200 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.09400 (7%) | 200 OK [http://127.0.0.1/messages/add_message]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:39:30) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJk1lc3NhZ2Ug%0Ad2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CVQ%3D--25c107e5b3bf0304755da846f749e4f15aa09f35
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;36;1mComment Columns (0.031000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 1) [0m
+Rendered messages/_list (0.04700)
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.03200 (29%) | DB: 0.06200 (56%) | 200 OK [http://127.0.0.1/]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:39:48) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--30a9621ce38e23d8e56b728813c56d2f7579ea2d
+  Parameters: {"message"=>{"body"=>"I don't how to solve Mysql::Error: #HY000Incorrect string value!"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.000000)[0m   [0;1mINSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:39:48', 'I don\'t how to solve Mysql::Error: #HY000Incorrect string value!', NULL, '2008-05-27 07:39:48')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering messages/add_message
+Completed in 1.42200 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (3%) | 200 OK [http://127.0.0.1/messages/add_message]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2008-05-27 15:41:11) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJk1lc3NhZ2Ug%0Ad2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CVQ%3D--25c107e5b3bf0304755da846f749e4f15aa09f35
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+  [4;35;1mComment Columns (0.016000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 2) [0m
+Rendered comments/_comment (0.01500)
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.07700 (55%) | DB: 0.04700 (33%) | 200 OK [http://127.0.0.1/messages/2]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2008-05-27 15:41:18) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--30a9621ce38e23d8e56b728813c56d2f7579ea2d
+  Parameters: {"commit"=>"Create", "message_id"=>"2", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"create", "controller"=>"comments", "comment"=>{"content"=>"some comment!"}}
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (0.015000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mComment Columns (0.000000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.000000)[0m   [0mINSERT INTO `comments` (`message_id`, `updated_at`, `author`, `content`, `created_at`) VALUES(2, '2008-05-27 07:41:19', NULL, 'some comment!', '2008-05-27 07:41:19')[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/messages/2
+Completed in 0.12500 (8 reqs/sec) | DB: 0.07800 (62%) | 302 Found [http://127.0.0.1/messages/2/comments]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2008-05-27 15:41:19) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJkNvbW1lbnQg%0Ad2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CVQ%3D--535a04860d5149c8feca004b791aee2a841a6e35
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.015000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+  [4;35;1mComment Columns (0.016000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;35;1mComment Load (0.015000)[0m   [0mSELECT * FROM `comments` WHERE (comments.message_id = 2) [0m
+Rendered comments/_comment (0.00000)
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.01600 (17%) | DB: 0.06200 (65%) | 200 OK [http://127.0.0.1/messages/2]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2008-05-27 15:41:33) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--30a9621ce38e23d8e56b728813c56d2f7579ea2d
+  Parameters: {"commit"=>"Create", "message_id"=>"2", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"create", "controller"=>"comments", "comment"=>{"content"=>"中文呢？"}}
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mComment Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.000000)[0m   [0;1mMysql::Error: #HY000Incorrect string value: '\xE4\xB8\xAD\xE6\x96\x87...' for column 'content' at row 1: INSERT INTO `comments` (`message_id`, `updated_at`, `author`, `content`, `created_at`) VALUES(2, '2008-05-27 07:41:33', NULL, '中文呢？', '2008-05-27 07:41:33')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: #HY000Incorrect string value: '\xE4\xB8\xAD\xE6\x96\x87...' for column 'content' at row 1: INSERT INTO `comments` (`message_id`, `updated_at`, `author`, `content`, `created_at`) VALUES(2, '2008-05-27 07:41:33', NULL, '中文呢？', '2008-05-27 07:41:33')):
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:281:in `execute'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:156:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:291:in `insert_sql'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:44:in `insert_without_query_dirty'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:19:in `insert'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2272:in `create_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:226:in `create_without_timestamps'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/timestamp.rb:29:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2238:in `create_or_update_without_callbacks'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/callbacks.rb:213:in `create_or_update'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1972:in `save_without_validation'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/validations.rb:934:in `save_without_transactions'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:66:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:80:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:100:in `transaction'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:120:in `rollback_active_record_state!'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/transactions.rb:108:in `save'
+    /app/controllers/comments_controller.rb:24:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `call'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:106:in `respond_to'
+    /app/controllers/comments_controller.rb:23:in `create'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    e:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    e:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    e:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    e:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    e:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering e:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2008-05-27 15:41:52) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--f22c899723c24e6d25208e246c23531191d8ab7d
+  Parameters: {"commit"=>"Create", "message_id"=>"2", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"create", "controller"=>"comments", "comment"=>{"content"=>"chinese characters is not support!"}}
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mComment Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.000000)[0m   [0;1mINSERT INTO `comments` (`message_id`, `updated_at`, `author`, `content`, `created_at`) VALUES(2, '2008-05-27 07:41:52', NULL, 'chinese characters is not support!', '2008-05-27 07:41:52')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3001/messages/2
+Completed in 0.10900 (9 reqs/sec) | DB: 0.10800 (99%) | 302 Found [http://127.0.0.1/messages/2/comments]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2008-05-27 15:41:52) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJkNvbW1lbnQg%0Ad2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CVQ%3D--faab739b6ea40e241231b087cbab59308469e3d5
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 2) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+  [4;36;1mComment Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;36;1mComment Load (0.000000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.message_id = 2) [0m
+Rendered comments/_comment (0.01500)
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.03100 (33%) | DB: 0.04600 (49%) | 200 OK [http://127.0.0.1/messages/2]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:41:54) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--f22c899723c24e6d25208e246c23531191d8ab7d
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;36;1mComment Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;36;1mComment Load (0.000000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 1) [0m
+Rendered messages/_list (0.39100)
+Completed in 0.60900 (1 reqs/sec) | Rendering: 0.43700 (71%) | DB: 0.07800 (12%) | 200 OK [http://127.0.0.1/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:41:58) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--30a9621ce38e23d8e56b728813c56d2f7579ea2d
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;35;1mComment Columns (0.000000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;35;1mComment Load (0.000000)[0m   [0mSELECT * FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 1) [0m
+Rendered messages/_list (0.04700)
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.04700 (42%) | DB: 0.01500 (13%) | 200 OK [http://127.0.0.1/messages]
+
+
+Processing MessagesController#add_message (for 127.0.0.1 at 2008-05-27 15:42:05) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYjM3MjFjMjBjZTU1Y2I3ZGM5%0AMGI4ZWIzYTFmY2U5MjI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--f22c899723c24e6d25208e246c23531191d8ab7d
+  Parameters: {"message"=>{"body"=>"test!"}, "commit"=>"发布", "authenticity_token"=>"d7624e7ff6fcb96bc4fa4e63e5f8237827894d9b", "action"=>"add_message", "controller"=>"messages"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.000000)[0m   [0mINSERT INTO `messages` (`name`, `updated_at`, `body`, `when`, `created_at`) VALUES('laoma', '2008-05-27 07:42:05', 'test!', NULL, '2008-05-27 07:42:05')[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering messages/add_message
+Completed in 1.29700 (0 reqs/sec) | Rendering: 0.01600 (1%) | DB: 0.04700 (3%) | 200 OK [http://127.0.0.1/messages/add_message]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-05-27 15:42:46) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiViMzcyMWMy%0AMGNlNTVjYjdkYzkwYjhlYjNhMWZjZTkyMiIKZmxhc2hJQzonQWN0aW9uQ29u%0AdHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJk1lc3NhZ2Ug%0Ad2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CVQ%3D--c6385cc80679de7579ce0650992568f8b90f2740
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMessage Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` [0m
+Rendering template within layouts/messages
+Rendering messages/index
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;35;1mComment Columns (0.016000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 3) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;36;1mComment Load (0.000000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.message_id = 2) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.message_id = 1) [0m
+Rendered messages/_list (0.04700)
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.04700 (42%) | DB: 0.03100 (28%) | 200 OK [http://127.0.0.1/messages]
