@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
      @message = Message.new
     #@messages = Message.paginate :page => params[:page],
                                  #:per_page => 5
-        @pager = ::Paginator.new(Message.count, 10) do |offset, per_page|
+        @pager = Paginator.new(Message.count, 10) do |offset, per_page|
             Message.find(:all, :order => "created_at DESC", :limit => per_page, :offset => offset)
           end
         @page = @pager.page(params[:page])
@@ -24,6 +24,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.xml  { render :xml => @page }
     end
   end
 
@@ -51,6 +52,7 @@ class MessagesController < ApplicationController
   
     def add_message
       @message = Message.new(params[:message]) 
+      @message.name = current_user.login
       @message.save
       update_twitter(@message.body,'nnnnon@gmail.com','2Akgyv2a')
       @pager = ::Paginator.new(Message.count, 10) do |offset, per_page|

@@ -19,7 +19,7 @@
 <!-- #1 -->
 <% unless @message.comments.empty? %>
   <h3>Comments</h3>
-  <% @message.comments.each do |comment| %>
+  <% @message.comments.reverse.each do |comment| %>
   <p><%= h comment.content %></p>
   <% end %>
 <% end %>

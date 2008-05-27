@@ -31,6 +31,8 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.active_record.observers = :user_observer
+
+
   #require "will_paginate" 
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

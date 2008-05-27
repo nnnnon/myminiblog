@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_filter :load_message, :login_required
   def index
-    @comments = @message.comments.find(:all)
+    @comments = @message.comments.find(:all,:order=>'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
